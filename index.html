@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="description"
+        content="Deformable Neural Radiance Fields creates free-viewpoint portraits (nerfies) from casually captured videos.">
+  <meta name="keywords" content="Nerfies, D-NeRF, NeRF">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Differentiable Physical Modeling Sound Synthesis: Theory, Musical Application, and Programming</title>
+
+
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+        rel="stylesheet">
+
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+  <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+  <link rel="icon" href="./static/images/favicon.svg">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="./static/js/fontawesome.all.min.js"></script>
+  <script src="./static/js/bulma-carousel.min.js"></script>
+  <script src="./static/js/bulma-slider.min.js"></script>
+  <script src="./static/js/index.js"></script>
+</head>
+<body>
+
+<nav class="navbar" role="navigation" aria-label="main navigation">
+  <div class="navbar-brand">
+    <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+    </a>
+  </div>
+</nav>
+
+
+<section class="hero">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+          <h1 class="title is-2 publication-title">
+              <span style="font-size: 80%">ISMIR 2025 Tutorial</span><br />
+              Differentiable Physical Modeling Sound Synthesis: Theory, Musical Application, and Programming
+            </h1>
+
+          <div class="is-size-5 publication-authors">
+              <span class="author-block"><a href="https://jnwoo.com/" style="border-radius: 50%">Jin Woo Lee</a><sup>1</sup></span>
+              <span class="author-block">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+              <span class="author-block"><a href="https://www.acoustics.ed.ac.uk/people/dr-stefan-bilbao/" style="border-radius: 50%">Stefan Bilbao</a><sup>2</sup></span>
+              <span class="author-block">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+              <span class="author-block"><a href="https://rodrigodzf.com/" style="border-radius: 50%">Rodrigo Diaz</a><sup>3</sup></span>
+          </div>
+          <p>&nbsp;</p>
+          <div class="is-size-6 publication-authors">
+              <p><span class="author-block"><sup>1</sup>MIT</span></p>
+              <p><span class="author-block"><sup>2</sup>University of Edinburgh</span></p>
+              <p><span class="author-block"><sup>3</sup>Queen Mary University of London</span></p>
+          </div>
+          <br />
+          <div class="is-size-5 publication-authors">
+              <p><b>Sunday September 21</b></p>
+              <p><b>09:00-12:30 KST</b></p>
+              <p>&nbsp;</p>
+          </div>
+          
+          <!--
+          <div class="is-size-5 publication-authors">
+            Visit <a target="_blank" href="">this link</a>
+            for the Zoom recording of the tutorial.
+          </div>
+          <div class="is-size-5 publication-authors">
+            Visit <a target="_blank" href="https://ismir2025.ismir.net/program-tutorials">this link</a>
+            for the full list of ISMIR 2025 tutorials.
+          </div>
+          <div class="is-size-5 publication-authors">
+            Visit <a target="_blank" href="https://arxiv.org/abs/000.00000">this link</a>
+            for the PDF note on this tutorial session.
+          </div>
+          -->
+          <div class="is-size-3 publication-authors">
+            <span class="author-block"><a href="https://github.com/ismir-physical-modeling/tutorial-notebooks" target="_blank" rel="noopener noreferrer">
+                <img src="https://img.shields.io/badge/GitHub-%23121011.svg?logo=github&logoColor=white" alt="Github" />
+            </a></span>
+            <span class="author-block"><a href="" target="_blank" rel="noopener noreferrer" style="text-decoration:none;">
+                <span style="
+                  display: inline-flex;
+                  align-items: center;
+                  background-color: #6b6459;
+                  color: white;
+                  font-family: Verdana, Geneva, sans-serif;
+                  font-weight: 100;
+                  font-size: 11px;
+                  height: 20px;
+                  padding: 0 8px;
+                  border-radius: 3px;
+                  gap: 6px;
+                  transform: translateY(-2px);
+                ">
+                    <img src="https://arxiv.org/static/browse/0.3.4/images/icons/favicon-32x32.png" alt="icon" width="16" height="16" style="display:block;" />
+                    <span>Lecture Note</span>
+                </span>
+            </a></span>
+            <span class="author-block"><a href="https://ismir2025.ismir.net/program-tutorials" target="_blank" rel="noopener noreferrer" style="text-decoration:none;">
+                <span style="
+                  display: inline-flex;
+                  align-items: center;
+                  background-color: #4682b4;
+                  color: white;
+                  font-family: Verdana, Geneva, sans-serif;
+                  font-weight: 100;
+                  font-size: 11px;
+                  height: 20px;
+                  padding: 0 8px;
+                  border-radius: 3px;
+                  gap: 6px;
+                  transform: translateY(-2px);
+                ">
+                    <img src="https://ismir2025.ismir.net/favicon.png" alt="icon" width="16" height="16" style="display:block;" />
+                    <span>ISMIR 2025 tutorials</span>
+                </span>
+            </a></span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="section">
+  <div class="container is-max-desktop">
+    <!-- Abstract. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">About this tutorial</h2>
+        <div class="content has-text-justified">
+          <p>
+            Recent years have witnessed growing interest in bridging traditional sound synthesis methods with emerging machine learning technologies. This tutorial is motivated by the convergence of two previously distinct trajectories in audio research: physics-based sound synthesis and data-driven neural approaches. This session highlights how differentiable physical modeling opens new avenues for musical sound synthesis by combining the interpretability and realism of physical simulation with the learning capacity of modern neural networks. The tutorial is structured into five segments: an overview of digital synthesis history and physical modeling, a detailed introduction to finite difference time domain (FDTD) methods across various instrument classes, a broad survey of neural architectures relevant to physical modeling, an in-depth look at differentiable modeling for parameter estimation using automatic differentiation, and a concluding session to synthesize key takeaways. Attendees will engage with theoretical material, practical demonstrations, and programming exercises, gaining hands-on experience in combining physics-based simulation with neural networks.
+          </p>
+          <p>
+            This tutorial is designed for researchers and engineers interested in advanced sound synthesis, particularly those working in musical acoustics, AI-based audio modeling, or digital instrument design. It will benefit individuals seeking to build physically plausible audio models or hybrid machine learning systems for realistic sound generation. All ISMIR members are warmly encouraged to attend—whether newcomers or seasoned researchers. The tutorial is designed to be approachable rather than overly technical, while still offering a deep understanding of how differentiable simulation can enhance synthesis fidelity, support neural network training, and advance hybrid sound modeling.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section class="section">
+  <div class="container is-max-desktop">
+
+    <div class="columns is-centered">
+      <div class="column is-full-width">
+        <h2 class="title is-3">Schedule</h2>
+        <p>
+          Our tutorial will be held on September 21 (all the times are based on KST = South Korea local time).
+          <em>Slides may be subject to updates.</em>
+        </p>
+
+        <div class="content has-text-justified">
+
+          <style type="text/css">
+          .tg  {border-collapse:collapse;border-spacing:0;}
+          .tg td{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
+            overflow:hidden;padding:10px 5px;word-break:normal;}
+          .tg th{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
+            font-weight:normal;overflow:hidden;padding:10px 5px;word-break:normal;}
+          .tg .tg-0pky{border-color:inherit;text-align:left;vertical-align:top}
+          .tg .tg-0lax{text-align:left;vertical-align:top}
+          </style>
+          <table class="tg">
+          <thead>
+            <tr>
+              <th class="tg-0pky">Time</th>
+              <th class="tg-0lax">Section</th>
+              <th class="tg-0lax">Presenter</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="tg-0lax">09:00—09:20 (20 min)</td>
+              <td class="tg-0lax">Part 1: <b>Introduction</b> &nbsp;
+                  <a href="./slides/tutorial_1.pdf"><i class="fas fa-file-pdf"></i> Slides </a>
+              </td>
+              <td class="tg-0lax">Stefan Bilbao</td>
+            </tr>
+            <tr>
+              <td class="tg-0lax">09:20—10:10 (50 min)</td>
+              <td class="tg-0lax">Part 2: <b>Finite Difference Time Domain Method</b> &nbsp;
+                  <a href="./slides/tutorial_2.pdf"><i class="fas fa-file-pdf"></i> Slides </a>
+              </td>
+              <td class="tg-0lax">Stefan Bilbao</td>
+            </tr>
+            <tr>
+              <td class="tg-0lax">10:10—10:40 (30 min)</td>
+              <td class="tg-0lax">Part 3: <b>Neural Network Designs for Physical Modeling</b> &nbsp;
+                  <a href="./slides/part-3.pdf"><i class="fas fa-file-pdf"></i> Slides </a>
+              </td>
+              <td class="tg-0lax">Rodrigo Diaz</td>
+            </tr>
+            <tr>
+              <td class="tg-0lax">10:40—10:50 (10 min)</td>
+              <td class="tg-0lax"><b>Q & A Session I</b></td>
+              <td class="tg-0lax"></td>
+            </tr>
+            <tr>
+              <td class="tg-0lax">10:50—11:00 (10 min)</td>
+              <td class="tg-0lax"><b>Coffee break</b></td>
+              <td class="tg-0lax"></td>
+            </tr>
+            <tr>
+              <td class="tg-0lax">11:00—11:20 (20 min)</td>
+              <td class="tg-0lax">Part 3 (Cont’d): <b>Neural Network Designs for Physical Modeling</b> &nbsp;
+                  <a href="./slides/part-3.pdf"><i class="fas fa-file-pdf"></i> Slides </a>
+                  <a href="./tutorial-noteboosk/part3"><i class="fas fa-code"></i> Notebook </a>
+              </td>
+              <td class="tg-0lax">Rodrigo Diaz</td>
+            </tr>
+            <tr>
+              <td class="tg-0lax">11:20—12:10 (50 min)</td>
+              <td class="tg-0lax">Part 4: <b>Differentiable Physical Modeling for Parameter Estimation</b> &nbsp;
+                  <a href="./slides/part-4.pdf"><i class="fas fa-file-pdf"></i> Slides </a>
+                  <a href="./tutorial-noteboosk/part4"><i class="fas fa-code"></i> Notebook </a>
+              </td>
+              <td class="tg-0lax">Jin Woo Lee</td>
+            </tr>
+            <tr>
+              <td class="tg-0lax">12:10—12:20 (10 min)</td>
+              <td class="tg-0lax">Part 5: <b>Conclusion</b> &nbsp;
+                  <a href="./slides/part-5.pdf"><i class="fas fa-file-pdf"></i> Slides </a>
+              </td>
+              <td class="tg-0lax">Jin Woo Lee</td>
+            </tr>
+            <tr>
+              <td class="tg-0lax">12:20—12:30 (10 min)</td>
+              <td class="tg-0lax"><b>Q & A Session II</b></td>
+              <td class="tg-0lax"></td>
+            </tr>
+          </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+
+    <!-- Concurrent Work. -->
+    <!-- 
+    <div class="columns is-centered">
+      <div class="column is-full-width">
+        <h2 class="title is-3">Reading List</h2>
+
+        <p><b>Boldfaced papers</b> will be discussed in detail during our tutorial.</p>
+
+        <br />
+        
+        
+        <h3 class="title is-5">Part 2: Finite Difference Time Domain Method</h3>
+
+        <ul>
+          <li><a href="https://arxiv.org/abs/000.00000"><b>Bold paper</b></a> (Author et al., 2000)</li>
+          <li><a href="https://arxiv.org/abs/000.00000">Standard paper</a> (Author et al., 2000)</li>
+        </ul>
+        
+        <br />
+
+        <h3 class="title is-5">Part 3: Neural Network Designs for Physical Modeling</h3>
+
+        <ul>
+          <li><a href="https://arxiv.org/abs/000.00000"><b>Bold paper</b></a> (Author et al., 2000)</li>
+          <li><a href="https://arxiv.org/abs/000.00000">Standard paper</a> (Author et al., 2000)</li>
+        </ul>
+
+        <br />
+
+        <h3 class="title is-5">Part 4: Differentiable Physical Modeling for Parameter Estimation</h3>
+
+        <ul>
+          <li><a href="https://arxiv.org/abs/000.00000"><b>Bold paper</b></a> (Author et al., 2000)</li>
+          <li><a href="https://arxiv.org/abs/000.00000">Standard paper</a> (Author et al., 2000)</li>
+        </ul>
+
+      </div>
+    </div>
+    -->
+
+
+</section>
+
+
+
+<section class="section" id="BibTeX">
+  <div class="container is-max-desktop content">
+    <h2 class="title">BibTeX</h2>
+    <pre><code>@article{ diff-pmss-tutorial,
+  author  = { Lee, Jin Woo and Bilbao, Stefan and Diaz, Rodrigo },
+  title   = { Differentiable Physical Modeling Sound Synthesis: Theory, Musical Application, and Programming },
+  journal = { ISMIR 2025 Tutorial },
+  year    = { 2025 },
+}</code></pre>
+  </div>
+</section>
+
+
+<footer class="footer">
+  <div class="container">
+    <div class="content has-text-centered">
+      <a class="icon-link" href="https://github.com/ismir-physical-modeling" class="external-link" disabled>
+        <i class="fab fa-github"></i>
+      </a>
+    </div>
+    <div class="columns is-centered">
+      <div class="column is-8">
+        <div class="content">
+          <p>
+            This website is licensed under a <a rel="license"
+                                                href="http://creativecommons.org/licenses/by-sa/4.0/">Creative
+            Commons Attribution-ShareAlike 4.0 International License</a>.
+          </p>
+          <p>
+            This means you are free to borrow the <a
+              href="https://github.com/nerfies/nerfies.github.io">source code</a> of this website,
+            we just ask that you link back to this page in the footer.
+            Please remember to remove the analytics code included in the header of the website which
+            you do not want on your website.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
