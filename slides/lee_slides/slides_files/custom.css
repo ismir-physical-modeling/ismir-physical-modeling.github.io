@@ -1,0 +1,9 @@
+/* overrides: ./slides_files/libs/quarto-contrib/videojs/video-js.css */
+.video-js {
+  background: none !important;   /* remove dark background */
+  border-radius: 10px; /* rounded corner */
+}
+.small-text {
+  font-size: 0.7em;
+}
+
