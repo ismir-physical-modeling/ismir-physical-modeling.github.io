@@ -230,22 +230,27 @@ A general procedure for modeling [@PASPWEB2010]:
 <div class="columns">
 <div class="column" style="width:50%;">
 <ul>
-<li>Reproducing a target sound
-<ul>
-<li>e.g., Kelly–Lochbaum used by <span class="citation" data-cites="mathews1961bicycle">(<a href="#/references" role="doc-biblioref" onclick="">Mathews 1961</a>)</span> to model vocal tract for singing voice synthesis <br> <br> <audio controls="" style="width:400px;"> <source src="https://raw.githubusercontent.com/jin-woo-lee/tutorial-slide-materials-pt4/main/audio/daisy.mp3" type="audio/mpeg"> </audio> <img data-src="https://raw.githubusercontent.com/jin-woo-lee/tutorial-slide-materials-pt4/main/figure/KL-tube.png" style="width:100.0%"> <video id="video_shortcode_videojs_video5" width="400" class="video-js vjs-default-skin " controls="" preload="auto" data-setup="{}" title=""><source src="https://raw.githubusercontent.com/jin-woo-lee/tutorial-slide-materials-pt4/main/figure/results/KL-tube-audio.mp4"></video></li>
-</ul></li>
+<li>Synthesized samples <span class="citation" data-cites="smith1992physical">(<a href="#/references" role="doc-biblioref" onclick="">Smith 1992</a>)</span> <img data-src="https://raw.githubusercontent.com/jin-woo-lee/tutorial-slide-materials-pt4/main/figure/pmudw-sax.png" style="width:100.0%"> <br> <audio controls="" style="width:400px;"> <source src="https://ccrma.stanford.edu/~jos/mp3/tenor-sax.mp3" type="audio/mpeg"> </audio> <img data-src="https://raw.githubusercontent.com/jin-woo-lee/tutorial-slide-materials-pt4/main/figure/pmudw-cello.png" style="width:100.0%"> <audio controls="" style="width:400px;"> <source src="https://ccrma.stanford.edu/~jos/mp3/cello.mp3" type="audio/mpeg"> </audio></li>
 </ul>
-</div><div class="column" style="width:50%;">
-<ul>
-<li>… and many other instruments <span class="citation" data-cites="smith1992physical">(<a href="#/references" role="doc-biblioref" onclick="">Smith 1992</a>)</span> <img data-src="https://raw.githubusercontent.com/jin-woo-lee/tutorial-slide-materials-pt4/main/figure/pmudw-sax.png" style="width:100.0%"> <br> <audio controls="" style="width:400px;"> <source src="https://ccrma.stanford.edu/~jos/mp3/tenor-sax.mp3" type="audio/mpeg"> </audio></li>
-</ul>
-<div class="fragment small-text">
-<ul>
-<li>Can obtain the parameters from measurements <br> <br></li>
-<li>But not necessarily guarantees reconstruction quality (the model has approximations) <br> <br></li>
-<li>Will focus on the resemblance of the output sound</li>
-</ul>
+<div class="small-text">
+<p>Sound examples from <code>https://ccrma.stanford.edu/</code> <br>&nbsp; &nbsp; <code>~jos/waveguide/Sound_Examples.html</code></p>
 </div>
+</div><div class="column" style="width:50%;">
+<div class="fragment small-text">
+<iframe data-external="1" src="https://www.youtube.com/embed/tTRoQNfDoPU?start=10" width="100%" height="300" title="" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
+</div>
+<div class="fragment small-text">
+<iframe data-external="1" src="https://www.youtube.com/embed/BUhhn2e1Zd0?start=14" width="100%" height="300" title="" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
+</div>
+<!--
+::: {.fragment .small-text}
+- Can obtain the parameters from measurements
+<br> <br>
+- But not necessarily guarantees reconstruction quality (the model has approximations)
+<br> <br>
+- Will focus on the resemblance of the output sound
+::: 
+-->
 </div></div>
 </section>
 <section id="the-inverse-problem" class="slide level2">
@@ -381,14 +386,15 @@ $$ \frac{\mathbf{u}[t_{+\Delta t}, x] - 2\mathbf{u}[t, x] + \mathbf{u}[t_{-\Delt
 <section id="fdtd-example-1d-wave-equation-x_f" class="slide level2">
 <h2>FDTD Example (1D Wave Equation) <span class="math inline">\(x_F\)</span></h2>
 <div class="columns">
-<div class="column" style="width:70%;">
+<div class="column small-text" style="width:70%;">
 <p><img data-src="https://raw.githubusercontent.com/jin-woo-lee/tutorial-slide-materials-pt4/main/figure/results/fdtd-x_F.png" style="width:100.0%"></p>
+<p>Spectrum of the string with <span class="math inline">\(F_0=220\)</span> Hz, output picked up at <span class="math inline">\(x=0.5\)</span></p>
 </div><div class="column" style="width:30%;">
 <p>Forcing location <span class="math inline">\(x_F\)</span></p>
 <ul>
-<li><span class="math inline">\(x_F=0.1\)</span> <br> Missing <span class="math inline">\(10 n\times F_0\)</span> Hz <audio controls="" style="width:300px;"> <source src="https://raw.githubusercontent.com/jin-woo-lee/tutorial-slide-materials-pt4/main/audio/fdtd-x_F-0-0.wav" type="audio/mpeg"> </audio></li>
-<li><span class="math inline">\(x_F=0.2\)</span> <br> Missing <span class="math inline">\(5 n\times F_0\)</span> Hz <audio controls="" style="width:300px;"> <source src="https://raw.githubusercontent.com/jin-woo-lee/tutorial-slide-materials-pt4/main/audio/fdtd-x_F-1-0.wav" type="audio/mpeg"> </audio></li>
-<li><span class="math inline">\(x_F=0.5\)</span> <br> Missing <span class="math inline">\(2 n\times F_0\)</span> Hz <audio controls="" style="width:300px;"> <source src="https://raw.githubusercontent.com/jin-woo-lee/tutorial-slide-materials-pt4/main/audio/fdtd-x_F-2-0.wav" type="audio/mpeg"> </audio></li>
+<li><span class="math inline">\(x_F=0.1\)</span> <br> Missing <span class="math inline">\(10 n\times F_0\)</span> <audio controls="" style="width:300px;"> <source src="https://raw.githubusercontent.com/jin-woo-lee/tutorial-slide-materials-pt4/main/audio/fdtd-x_F-0-0.wav" type="audio/mpeg"> </audio></li>
+<li><span class="math inline">\(x_F=0.2\)</span> <br> Missing <span class="math inline">\(5 n\times F_0\)</span> <audio controls="" style="width:300px;"> <source src="https://raw.githubusercontent.com/jin-woo-lee/tutorial-slide-materials-pt4/main/audio/fdtd-x_F-1-0.wav" type="audio/mpeg"> </audio></li>
+<li><span class="math inline">\(x_F=0.5\)</span> <br> Missing <span class="math inline">\(2 n\times F_0\)</span> <audio controls="" style="width:300px;"> <source src="https://raw.githubusercontent.com/jin-woo-lee/tutorial-slide-materials-pt4/main/audio/fdtd-x_F-2-0.wav" type="audio/mpeg"> </audio></li>
 </ul>
 </div></div>
 </section>
@@ -414,8 +420,8 @@ $$ \frac{\mathbf{u}[t_{+\Delta t}, x] - 2\mathbf{u}[t, x] + \mathbf{u}[t_{-\Delt
 </div><div class="column" style="width:30%;">
 <p>Forcing duration <span class="math inline">\(\tau\)</span></p>
 <ul>
-<li><span class="math inline">\(\tau=0.12\)</span> <audio controls="" style="width:300px;"> <source src="https://raw.githubusercontent.com/jin-woo-lee/tutorial-slide-materials-pt4/main/audio/fdtd-tau-0-0.wav" type="audio/mpeg"> </audio></li>
-<li><span class="math inline">\(\tau=0.25\)</span> <audio controls="" style="width:300px;"> <source src="https://raw.githubusercontent.com/jin-woo-lee/tutorial-slide-materials-pt4/main/audio/fdtd-tau-1-0.wav" type="audio/mpeg"> </audio></li>
+<li><span class="math inline">\(\tau=0.15\)</span> <audio controls="" style="width:300px;"> <source src="https://raw.githubusercontent.com/jin-woo-lee/tutorial-slide-materials-pt4/main/audio/fdtd-tau-0-0.wav" type="audio/mpeg"> </audio></li>
+<li><span class="math inline">\(\tau=0.30\)</span> <audio controls="" style="width:300px;"> <source src="https://raw.githubusercontent.com/jin-woo-lee/tutorial-slide-materials-pt4/main/audio/fdtd-tau-1-0.wav" type="audio/mpeg"> </audio></li>
 <li><span class="math inline">\(\tau=0.50\)</span> <audio controls="" style="width:300px;"> <source src="https://raw.githubusercontent.com/jin-woo-lee/tutorial-slide-materials-pt4/main/audio/fdtd-tau-2-0.wav" type="audio/mpeg"> </audio></li>
 </ul>
 </div></div>
@@ -480,9 +486,9 @@ $$ \frac{\mathbf{u}[t_{+\Delta t}, x] - 2\mathbf{u}[t, x] + \mathbf{u}[t_{-\Delt
 </ul>
 <div class="columns">
 <div class="column" style="width:50%;">
-<p><video id="video_shortcode_videojs_video6" class="video-js vjs-default-skin vjs-fluid" controls="" preload="auto" data-setup="{}" title=""><source src="https://raw.githubusercontent.com/jin-woo-lee/tutorial-slide-materials-pt4/main/dfdtd/obs1-seed2222.mp4"></video> <video id="video_shortcode_videojs_video7" class="video-js vjs-default-skin vjs-fluid" controls="" preload="auto" data-setup="{}" title=""><source src="https://raw.githubusercontent.com/jin-woo-lee/tutorial-slide-materials-pt4/main/dfdtd/obs1-seed2222-out.mp4"></video></p>
+<p><video id="video_shortcode_videojs_video5" class="video-js vjs-default-skin vjs-fluid" controls="" preload="auto" data-setup="{}" title=""><source src="https://raw.githubusercontent.com/jin-woo-lee/tutorial-slide-materials-pt4/main/dfdtd/obs1-seed2222.mp4"></video> <video id="video_shortcode_videojs_video6" class="video-js vjs-default-skin vjs-fluid" controls="" preload="auto" data-setup="{}" title=""><source src="https://raw.githubusercontent.com/jin-woo-lee/tutorial-slide-materials-pt4/main/dfdtd/obs1-seed2222-out.mp4"></video></p>
 </div><div class="column" style="width:50%;">
-<p><video id="video_shortcode_videojs_video8" class="video-js vjs-default-skin vjs-fluid" controls="" preload="auto" data-setup="{}" title=""><source src="https://raw.githubusercontent.com/jin-woo-lee/tutorial-slide-materials-pt4/main/dfdtd/obs1-seed42.mp4"></video> <video id="video_shortcode_videojs_video9" class="video-js vjs-default-skin vjs-fluid" controls="" preload="auto" data-setup="{}" title=""><source src="https://raw.githubusercontent.com/jin-woo-lee/tutorial-slide-materials-pt4/main/dfdtd/obs1-seed42-out.mp4"></video></p>
+<p><video id="video_shortcode_videojs_video7" class="video-js vjs-default-skin vjs-fluid" controls="" preload="auto" data-setup="{}" title=""><source src="https://raw.githubusercontent.com/jin-woo-lee/tutorial-slide-materials-pt4/main/dfdtd/obs1-seed42.mp4"></video> <video id="video_shortcode_videojs_video8" class="video-js vjs-default-skin vjs-fluid" controls="" preload="auto" data-setup="{}" title=""><source src="https://raw.githubusercontent.com/jin-woo-lee/tutorial-slide-materials-pt4/main/dfdtd/obs1-seed42-out.mp4"></video></p>
 </div></div>
 </section>
 <section id="distribution-estimation-using-diff.-fdtd" class="slide level2">
@@ -557,7 +563,7 @@ $$ \frac{\mathbf{u}[t_{+\Delta t}, x] - 2\mathbf{u}[t, x] + \mathbf{u}[t_{-\Delt
 <div class="column" style="width:60%;">
 <ul>
 <li>Scan the QR code</li>
-<li>Or, access the same link by typing: <br> <code>https://bit.ly/ismir-pm-part4</code></li>
+<li>Or, access the same link by typing: <br> <code>https://bit.ly/ismir-pm-pt4-notebook</code></li>
 </ul>
 </div><div class="column" style="width:40%;">
 <p><img data-src="https://raw.githubusercontent.com/jin-woo-lee/tutorial-slide-materials-pt4/main/figure/qrcode_forced_string.png" style="margin-top: -100px"></p>
@@ -649,9 +655,6 @@ Kac, Mark. 1966. <span>“Can One Hear the Shape of a Drum?”</span> <em>The Am
 </div>
 <div id="ref-lee2024differentiable" class="csl-entry" role="listitem">
 Lee, Jin Woo, Jaehyun Park, Min Jun Choi, and Kyogu Lee. 2024. <span>“Differentiable Modal Synthesis for Physical Modeling of Planar String Sound and Motion Simulation.”</span> <em>Advances in Neural Information Processing Systems</em> 37: 1058–81.
-</div>
-<div id="ref-mathews1961bicycle" class="csl-entry" role="listitem">
-Mathews, Max. 1961. <span>“Bicycle Built for Two (1961).”</span> <em>Computer Music Currents</em>, no. 13.
 </div>
 <div id="ref-smith1992physical" class="csl-entry" role="listitem">
 Smith, Julius O. 1992. <span>“Physical Modeling Using Digital Waveguides.”</span> <em>Computer Music Journal</em> 16 (4): 74–91.
@@ -1051,7 +1054,6 @@ Zheleznov, Victor, Stefan Bilbao, Alec Wright, and Simon King. 2025. <span>“Le
     <script>videojs(video_shortcode_videojs_video6);</script>
     <script>videojs(video_shortcode_videojs_video7);</script>
     <script>videojs(video_shortcode_videojs_video8);</script>
-    <script>videojs(video_shortcode_videojs_video9);</script>
     
 
 </body></html>
