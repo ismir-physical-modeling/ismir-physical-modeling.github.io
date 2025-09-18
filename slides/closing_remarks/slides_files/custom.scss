@@ -1,0 +1,24 @@
+/**
+ * Black theme for reveal.js.
+ *
+ * Copyright (C) 2011-2012 Hakim El Hattab, http://hakim.se
+ *
+ * Adapted for Quarto by Posit, PBC
+ * Copyright (C) 2024 Posit, PBC
+ */
+
+/*-- scss:defaults --*/
+
+/* Adapted from
+ * /Applications/quarto/share/formats/revealjs/themes/night.scss
+ */
+
+@import url(https://fonts.googleapis.com/css?family=Montserrat:700);
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic,700italic);
+
+$font-family-sans-serif: "Open Sans", sans-serif !default;
+$presentation-heading-font: "Montserrat", sans-serif !default;
+$presentation-heading-text-shadow: none !default;
+$presentation-heading-letter-spacing: -0.03em !default;
+$presentation-heading-text-transform: none !default;
+$presentation-font-size-root: 30px !default;
