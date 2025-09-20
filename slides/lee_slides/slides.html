@@ -168,27 +168,20 @@ Jin Woo Lee
 <li class="fragment"><strong>Interpret the role</strong> of differentiable simulation and neural networks</li>
 <li class="fragment"><strong>Estimate control parameters</strong> by implementing the differentiable plucked string simulation</li>
 </ul>
-</section>
-<section id="contents" class="slide level2">
-<h2>Contents</h2>
-<ul>
-<li><strong>Parameter Estimation</strong> in Physical Modeling
-<ul>
-<li>Physical modeling sound synthesis</li>
-<li>The inverse problem</li>
-<li>Parameters of interest</li>
-<li>The parameter estimation</li>
-</ul></li>
-<li><strong>Differentiable Simulation</strong> for Point Estimation
-<ul>
-<li>FDTD example (1D wave equation)</li>
-<li>Differentiable FDTD simulation</li>
-<li>Point Estimation using Differentiable FDTD</li>
-<li>Distribution Estimation using Differentiable FDTD</li>
-</ul></li>
-<li><strong>Programming</strong> Excercises</li>
-<li><strong>Remarks</strong> and Perspectives</li>
-</ul>
+<!--
+## Contents
+- **Parameter Estimation** in Physical Modeling
+  - Physical modeling sound synthesis
+  - The inverse problem
+  - The parameter estimation
+- **Differentiable Simulation** for Parameter Estimation 
+  - FDTD example (1D wave equation)
+  - Differentiable FDTD simulation
+  - Point Estimation using Differentiable FDTD
+  - Distribution Estimation using Differentiable FDTD
+- **Programming** Excercises
+- **Remarks** and Perspectives
+-->
 <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
 </section>
 <section>
@@ -276,23 +269,24 @@ A general procedure for modeling [@PASPWEB2010]:
 </div><div class="column" style="width:40%;">
 <p><img data-src="https://raw.githubusercontent.com/jin-woo-lee/tutorial-slide-materials-pt4/main/figure/sim-2.png" style="width:100.0%"></p>
 </div></div>
-</section>
-<section id="parameters-of-interest" class="slide level2">
-<h2>Parameters of interest</h2>
-<div class="columns">
-<div class="column" style="width:68%;">
-<ul>
-<li>A lot of factors can affect the output sound.</li>
-<li>Not all of them are within our scope of interest.
-<ul>
-<li>sub-dominant parts, measurement noise, etc.</li>
-<li>often lumped into latent variables (nuisance param.)</li>
-</ul></li>
-<li>Estimation as a one-to-many problem <span class="citation" data-cites="kac1966can">(<a href="#/references" role="doc-biblioref" onclick="">Kac 1966</a>)</span> <img data-src="https://raw.githubusercontent.com/jin-woo-lee/tutorial-slide-materials-pt4/main/figure/hearing-the-shape.jpg" style="width:60.0%"></li>
-</ul>
-</div><div class="column" style="width:32%;">
-<p><img data-src="https://raw.githubusercontent.com/jin-woo-lee/tutorial-slide-materials-pt4/main/figure/nuisance-params.png" style="float:right; width=70%"> <img data-src="https://raw.githubusercontent.com/jin-woo-lee/tutorial-slide-materials-pt4/main/figure/luthiery-1.jpg" style="float:right; width=100%"> <img data-src="https://raw.githubusercontent.com/jin-woo-lee/tutorial-slide-materials-pt4/main/figure/luthiery-2.png" style="float:right; width=100%"></p>
-</div></div>
+<!--
+## Parameters of interest
+::: {.columns}
+::: {.column width="68%"}
+- A lot of factors can affect the output sound.
+- Not all of them are within our scope of interest.
+  - sub-dominant parts, measurement noise, etc.
+  - often lumped into latent variables (nuisance param.)
+- Estimation as a one-to-many problem [@kac1966can]
+![](https://raw.githubusercontent.com/jin-woo-lee/tutorial-slide-materials-pt4/main/figure/hearing-the-shape.jpg){width=60%}
+::: 
+::: {.column width="32%"}
+![](https://raw.githubusercontent.com/jin-woo-lee/tutorial-slide-materials-pt4/main/figure/nuisance-params.png){style="float:right; width=70%"}
+![](https://raw.githubusercontent.com/jin-woo-lee/tutorial-slide-materials-pt4/main/figure/luthiery-1.jpg){style="float:right; width=100%"}
+![](https://raw.githubusercontent.com/jin-woo-lee/tutorial-slide-materials-pt4/main/figure/luthiery-2.png){style="float:right; width=100%"}
+::: 
+::: 
+-->
 </section>
 <section id="the-parameter-estimation" class="slide level2">
 <h2>The parameter estimation</h2>
@@ -345,8 +339,8 @@ A general procedure for modeling [@PASPWEB2010]:
 <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
 </section></section>
 <section>
-<section id="differentiable-simulation-for-point-estimation" class="title-slide slide level1 center">
-<h1>Differentiable Simulation for Point Estimation</h1>
+<section id="differentiable-simulation-for-parameter-estimation" class="title-slide slide level1 center">
+<h1>Differentiable Simulation for Parameter Estimation</h1>
 <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
 <!--
 ## FDTD Example (1D Wave Equation)
@@ -486,9 +480,9 @@ $$ \frac{\mathbf{u}[t_{+\Delta t}, x] - 2\mathbf{u}[t, x] + \mathbf{u}[t_{-\Delt
 </ul>
 <div class="columns">
 <div class="column" style="width:50%;">
-<p><video id="video_shortcode_videojs_video5" class="video-js vjs-default-skin vjs-fluid" controls="" preload="auto" data-setup="{}" title=""><source src="https://raw.githubusercontent.com/jin-woo-lee/tutorial-slide-materials-pt4/main/dfdtd/obs1-seed2222.mp4"></video> <video id="video_shortcode_videojs_video6" class="video-js vjs-default-skin vjs-fluid" controls="" preload="auto" data-setup="{}" title=""><source src="https://raw.githubusercontent.com/jin-woo-lee/tutorial-slide-materials-pt4/main/dfdtd/obs1-seed2222-out.mp4"></video></p>
+<p><video id="video_shortcode_videojs_video5" class="video-js vjs-default-skin vjs-fluid" controls="" preload="auto" data-setup="{}" title=""><source src="https://raw.githubusercontent.com/jin-woo-lee/tutorial-slide-materials-pt4/main/dfdtd/obs1-seed42.mp4"></video> <video id="video_shortcode_videojs_video6" class="video-js vjs-default-skin vjs-fluid" controls="" preload="auto" data-setup="{}" title=""><source src="https://raw.githubusercontent.com/jin-woo-lee/tutorial-slide-materials-pt4/main/dfdtd/obs1-seed42-out.mp4"></video></p>
 </div><div class="column" style="width:50%;">
-<p><video id="video_shortcode_videojs_video7" class="video-js vjs-default-skin vjs-fluid" controls="" preload="auto" data-setup="{}" title=""><source src="https://raw.githubusercontent.com/jin-woo-lee/tutorial-slide-materials-pt4/main/dfdtd/obs1-seed42.mp4"></video> <video id="video_shortcode_videojs_video8" class="video-js vjs-default-skin vjs-fluid" controls="" preload="auto" data-setup="{}" title=""><source src="https://raw.githubusercontent.com/jin-woo-lee/tutorial-slide-materials-pt4/main/dfdtd/obs1-seed42-out.mp4"></video></p>
+<p><video id="video_shortcode_videojs_video7" class="video-js vjs-default-skin vjs-fluid" controls="" preload="auto" data-setup="{}" title=""><source src="https://raw.githubusercontent.com/jin-woo-lee/tutorial-slide-materials-pt4/main/dfdtd/obs1-seed2222.mp4"></video> <video id="video_shortcode_videojs_video8" class="video-js vjs-default-skin vjs-fluid" controls="" preload="auto" data-setup="{}" title=""><source src="https://raw.githubusercontent.com/jin-woo-lee/tutorial-slide-materials-pt4/main/dfdtd/obs1-seed2222-out.mp4"></video></p>
 </div></div>
 </section>
 <section id="distribution-estimation-using-diff.-fdtd" class="slide level2">
